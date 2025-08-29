@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <title>Kopi af https://www.youtube.com/</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<style>
+/* GØR SÅ NOGEN AF VIDEOER ER MED RØD STREG UNDER, 
+LIGESOM AT MAN HAR SET NOGET AF DEN
+
+GØR SÅ ALLE KNAPPER VIRKER SOM DE SKAL
+
+
+
+*/
+
+
+    p {
+        font-family: 'Roboto', Arial;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+        .thumbnail1 {
+            width: 100%;
+    
+        }
+
+       
+      
+.Søg::placeholder{
+    font-family: Roboto;
+    font-size: 16px;
+    
+}
+
+        .video-title {
+            margin-top: 0px;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 20px;
+            margin-bottom: 5px;
+        }
+
+        
+        .channel-picture {
+            display: inline-block;
+            width: 50px;
+            vertical-align: top;
+        }
+        .video-info  {
+            display: inline-block;
+            width: 245px;
+            padding-bottom: 4px;
+
+        }
+
+        .profile-picture {
+            width: 40px;
+            border-radius: 50px
+            
+        }
+        
+        .profile-picture:hover{
+            cursor: pointer;
+        }
+
+        .thumbnail-row {
+                margin-bottom: 10px;
+                position: relative;
+                align-content: baseline;
+            }
+            .thumbnail-row:hover{
+                cursor: pointer;
+            }
+            
+            .video-preview:last-child .thumbnail-row {
+                margin-top: 32px;
+                
+        }
+
+        .video-author,
+        .stats {
+            font-size: 13px;
+            color: grey;
+            margin-bottom: 0px;
+        }
+.video-author {
+    margin-bottom: 0px; 
+    
+}
+
+
+
+.video-info-grid{
+display: grid;
+grid-template-columns: 50px 1fr;
+
+}
+
+.video-grid{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+column-gap: 16px;
+row-gap: 40px;
+align-self: center;
+
+}
+
+
+@media (max-width: 600px) {
+   .video-grid{
+    grid-template-columns: 11fr 1fr;
+   }
+}
+
+.header{
+    height: 75px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    z-index: 100;
+
+    position: fixed;
+    top: 0px;  
+    left: 0px;
+    right: 0px;
+
+    background-color: rgb(255, 255, 255);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(201, 201, 201);
+}
+.left-sec {
+    background-color: rgb(255, 255, 255);
+    width: 250px;
+    display: flex;
+    align-items: center ;
+    
+}
+
+.Hamburger{
+height: 30px;
+margin-left: 20px;
+margin-right: 20px;
+cursor: pointer;
+}
+
+.Hamburger:active {
+    background-color: #b0b0b03e;
+}
+
+.yt-logo{
+height: 30px;
+cursor: pointer;
+}
+
+.right-sec{
+    background-color: rgb(255, 255, 255);
+    /*width: 350px;*/
+    gap: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.middle-sec {
+    background-color: rgb(255, 255, 255);
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 0; 
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+}
+ .Søg {
+            flex: 1;
+            height: 35px;
+            padding-left: 10px;
+            font-size: 16px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(231, 231, 231);
+            border-radius: 16px 0px 0px 16px; 
+
+            position: relative;
+        }
+.search{
+    position: relative;
+    height: 39px;
+    width: 47px;
+    object-fit: scale-down 10px;
+    margin-left: -2px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(192,192,192); 
+    display: flex;
+    align-items: center;
+    background-color: rgb(231, 231, 231);
+    border-radius: 0px 16px 16px 0px; 
+}
+
+.searchbillede{
+    height: 25px;
+    width: 25px;
+    margin-left: 4px;
+}
+
+
+.voice{
+    height: 41px;
+    width: 40px;
+    border-radius: 100px;
+    margin-left: 15px;
+    background-color: rgb(231,231,231);
+    border-color: rgb(192,192,192);
+    border-style: solid;
+    border-width: 1px;
+
+}
+.vociebillede{
+    height: 25px;
+    width: 25px;
+    margin-left: 0px;
+    margin-top: 2px;
+}
+
+.vociebillede:hover{
+    cursor: pointer;
+}
+
+.Cam{
+    height: 38px;
+    
+}
+.Apps{
+    height: 30px;
+}
+
+
+
+.Noti{
+    height: 30px;
+}
+
+.noti-icon{
+    position: absolute;
+    background-color: rgb(211, 7, 7);
+    right: -3px;
+    top: -2px;
+    color: white;
+    font-family: Robotto;   
+    font-size: 12px;    
+    padding-left: 6.5px;  
+    padding-right: 6.5px;
+    padding-bottom: 2.5px;    
+    padding-top: 2.5px;
+    border-radius: 10px;
+}
+
+.noti-icon:hover{
+    cursor: pointer;
+}
+.noti-cont:hover{
+    cursor: pointer;
+}
+.noti-cont{
+    position: relative;
+    
+   
+
+}
+
+.profilnon{
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+}
+
+.opret{
+    height: 35px;
+    font-size: 20px;
+    background-color: rgb(231,231,231);
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    font-size: 16px;
+}
+.opret:hover{
+background-color: aliceblue;
+box-shadow: 1px 1px 5px grey;
+cursor: pointer;
+
+
+}
+
+
+.opret span {
+    font-size: 38px;
+    font-family: thin;
+    margin-right: 4px;
+    display: flex;
+    align-items: center;
+}
+.video-time{
+    background-color: black;
+    font-weight: 500;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    font-family: Roboto;
+    font-size: 14px;
+    
+}
+
+.linje {
+     background-color: rgb(255, 0, 0);
+    font-weight: 200;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    color: white;
+    position: absolute;
+    bottom: 108px;
+    right: 232.5px;
+    font-family: Roboto;
+    font-size: 14px;
+    z-index: 10;
+    height: 2px;
+    width: 300px;
+
+}
+
+.linje1 {
+     background-color: rgb(255, 0, 0);
+    font-weight: 200;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    color: white;
+    position: absolute;
+    top: 396px;
+    left: 98px;
+    font-family: Roboto;
+    font-size: 14px;
+    z-index: 10;
+    height: 2px;
+    width: 400px;
+
+}
+
+.linje2 {
+     background-color: rgb(255, 0, 0);
+    font-weight: 200;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    color: white;
+    position: absolute;
+    top: 1246px;
+    left: 98px;
+    font-family: Roboto;
+    font-size: 14px;
+    z-index: 10;
+    height: 2px;
+    width: 100px;
+
+}
+
+.sidebar {
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    left: 0px;
+    bottom: 0px;  
+    top: 75px;  
+    width: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh - 75px);
+    margin-top: 1px;
+    padding-left: 2px;
+    padding-right: 8px;
+}
+
+.sidebar-bottom {
+    width: 100%;
+    margin-bottom: 16px;
+    border-top: 1px solid #ddd;
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+    margin-left: -8px;
+    color: #000000;
+}
+.sidebar-bottom-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #000000;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    padding-left: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+    border-radius: 6px;
+    height: 32px;
+}
+.sidebar-bottom-link:hover {
+    background: #f2f2f2;
+}
+.sidebar-bottom-link img {
+    width: 15px;
+    height: 15px;
+    filter: invert(0.7);
+    color: #000000;
+
+}
+.sidebar-link {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.sidebar-link:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.sidebar-link img {
+    height: 32px;
+    margin-bottom: 6px;
+    padding-left: 0; 
+}
+
+.sidebar-link div {
+    font-family: Roboto;
+    font-size: 12px;
+    padding-left: 0; 
+    text-align: center;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: grey;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px; 
+    padding-left: 5px;
+    padding-right: 4.5px;
+    border-radius: 2px;
+    font-size: 12px;
+    top: 110%;    
+    left: 50%;      
+    transform: translateX(-50%);
+    opacity: 0;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.tooltip1 {
+    position: absolute;
+    background-color: grey;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px; 
+    padding-left: 5px;
+    padding-right: 4.5px;
+    border-radius: 2px;
+    font-size: 12px;
+    top: 110%;    
+    left: 50%;      
+    transform: translateX(-50%);
+    opacity: 0;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.search:hover{
+    cursor: pointer;
+}
+
+.search:hover .tooltip {
+    opacity: 1;
+}
+
+.DK{
+    position: absolute;
+    font-family: Roboto;
+    font-size: 10px;
+    margin-left: 200px;
+    margin-top: 20px;
+}
+
+.opret:hover + .tooltip {
+  opacity: 1;
+  font-family: Roboto;
+}
+
+.Apps:hover + .tooltip {
+  opacity: 1;
+  font-family: Roboto;
+  cursor: pointer;
+}
+.Apps:hover{
+    cursor: pointer;
+}
+
+.Apps:active{
+    background-color: #b0b0b03e;
+}
+
+
+
+span:hover .tooltip {
+  opacity: 1;
+  font-family: Roboto;
+}
+
+.Cam:hover .tooltip {
+  opacity: 1;
+  font-family: Roboto;
+  margin-top: 1020px;
+  cursor: pointer;
+}
+
+.Cam{
+    cursor: pointer;
+}
+
+.Cam:active {
+  background-color: #b0b0b03e;
+}
+
+.Noti:hover + .tooltip {
+  opacity: 1;
+  font-family: Roboto;
+  cursor: pointer;
+}
+
+.Noti{
+    cursor: pointer;
+}
+
+.Noti:active {
+  background-color: #b0b0b03e;
+}
+
+.profilnon{
+    cursor: pointer;
+}
+
+.voice-tooltip {
+  left: 20%;
+  transform: translateX(-20%);
+}
+
+        </style>
+
+    </head>
+
+
+
+
+
+
+
+
+
+
+    <body style="padding-top: 90px; 
+    padding-left: 90px;
+    padding-right: 10px; 
+    height: 2250px;
+    background-color: rgba(211, 211, 211, 0.191);
+    padding-top: 100px;
+     
+     ">
+
+   
+
+    <div class="header">
+        <div class="left-sec">
+
+            <span style="position: relative; display: inline-block;">
+            <img class="Hamburger" src="Billeder/hamburger-menu.svg">
+            <div class="tooltip">Menu</div>
+            </span>
+
+            <span style="position: relative; display: inline-block;">
+            <a href="https://www.youtube.com/">
+                <img class="yt-logo" src="Billeder/youtube-logo.svg">
+            </a>
+            </span>
+        </div>
+        <div class="middle-sec">   
+            <input class="Søg" type="text" placeholder="Søg på Youtube">
+            <button class="search"><img class="searchbillede" src="Billeder/search.svg" alt="">
+            <div class="tooltip">Search</div>
+            </button>
+
+
+               <span style="position: relative; display: inline-block;">
+          <button class="voice">
+            <img class="vociebillede" src="Billeder/voice-search-icon.svg" alt="">
+          </button>
+          <div class="tooltip voice-tooltip">Voice search</div>
+            </span>
+
+        </div>
+        <div class="right-sec">   
+                            <span style="position: relative; display: inline-block;">
+                          <button class="opret"><span> + </span>Opload</button>
+                          <div class="tooltip">Opload En Video </div>
+                        </span>
+
+                        <span style="position: relative; display: inline-block;">
+              <img class="Cam" src="Billeder/upload.svg">
+              <div class="tooltip">Upload</div>
+                        </span>
+            
+            
+                        <span style="position: relative; display: inline-block;">
+                            <img class="Apps" src="Billeder/youtube-apps.svg">
+                            <div class="tooltip">Apps</div>
+                        </span>
+            
+                
+                
+                              <span style="position: relative; display: inline-block;">
+                  <img class="Noti" src="Billeder/notifications.svg">
+                  <div class="tooltip">Notifikationer</div>
+                  <div class="noti-icon"> 3</div>
+                </span>
+
+                <span style="position: relative; display: inline-block;">
+                  <img class="profilnon" src="Billeder/gaming-pictures-y28eq1sl2i8adtnz.jpg">
+                  <div class="tooltip">Profil</div>
+                </span>
+               
+           
+            
+            
+        </div>
+    <div class="sidebar"
+  
+    style="background-color: rgb(255, 255, 255);
+    position: fixed;
+    left: 0px;
+    bottom: 0px;  
+    top: 75px;  
+    width: 72px;">
+
+                    <div class="sidebar-link">
+                        <img src="Billeder/home.svg">
+                        <div>Home</div>
+                    </div>
+
+                    <div class="sidebar-link">
+                        <img src="Billeder/explore.svg">
+                        <div>Explore</div>
+                    </div>
+
+                    <div class="sidebar-link">
+                        <img src="Billeder/subscriptions (1).svg">
+                        <div>Subscriptions</div>
+                    </div>
+
+                    <div class="sidebar-link">
+                        <img src="Billeder/originals.svg">
+                        <div>Originals</div>
+                    </div>
+
+                    <div class="sidebar-link">
+                        <img src="Billeder/youtube-music.svg">
+                        <div>Music</div>
+                    </div>
+
+                    <div class="sidebar-link">
+                        <img src="Billeder/library.svg">
+                        <div>Library</div>
+                    </div>
+                     <div class="sidebar-linje">
+                        <img src="">
+                        <div></div>
+                    </div>
+
+        <div class="sidebar-bottom">
+            <div class="sidebar-bottom-link">
+                <img src="Billeder/settings-3110.png" alt="Settings">
+                <span>Settings</span>
+            </div>
+            <div class="sidebar-bottom-link">
+                <img src="Billeder/[CITYPNG.COM]FREE White Flag On Pole Illustration PNG - 2000x2000.png" alt="Report history">
+                <span>Report history</span>
+            </div>
+            <div class="sidebar-bottom-link">
+                <img src="Billeder/[CITYPNG.COM]Black Circle Round Question Mark Icon PNG - 1500x1500.png" alt="Help">
+                <span>Help</span>
+            </div>
+        </div>
+    </div>
+<div class="DK">DK</div>
+
+    </div class="video-grid">
+<div class="video-grid">    
+<div class="video-preview">
+    <div class="thumbnail-row"> 
+<a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_blank">
+  <img class="thumbnail1" src="Billeder/thumbnail-1.webp">
+</a>
+<div class="video-time">14:02</div>
+    </div>
+
+    <div class="video-info-grid"> 
+        <div class="channel-picture">
+            <img class="profile-picture" src="Billeder/channel-1.jpeg">
+        </div>
+
+        <div class="video-info">
+            <p class="video-title">
+    Talking Tech and AI with Google CEO Sundar Pichai!
+</p>
+<p class="video-author">
+    Marques Brownlee
+</p>   
+
+<p class="stats">
+    3.4M views &#183 6 months ago
+</p>
+
+<p class="linje1">
+    </p>
+        </div> 
+       
+        
+    </div>
+
+    </div>
+
+
+<div class="video-preview">
+    <div class="thumbnail-row"> 
+<a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_blank">
+  <img class="thumbnail1" src="Billeder/thumbnail-2.webp">
+</a>
+<div class="video-time">21:02</div>
+    </div>
+
+    <div class="video-info-grid"> 
+        <div class="channel-picture">
+            <img class="profile-picture" src="Billeder/channel-2.jpeg">
+        </div>
+
+        <div class="video-info">
+            <p class="video-title">
+    Try Not To Laugh Challenge #9
+</p>
+<p class="video-author">
+    Markiplier
+</p>   
+
+<p class="stats">
+    31.4M views &#183 4 years ago
+</p>
+        </div> 
+       
+        
+    </div>
+
+    </div>
+
+<div class="video-preview">
+    <div class="thumbnail-row"> 
+<a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_blank">
+  <img class="thumbnail1" src="Billeder/thumbnail-3.webp">
+</a>
+<div class="video-time">8:52</div>
+    </div>
+
+    <div class="video-info-grid"> 
+        <div class="channel-picture">
+            <img class="profile-picture" src="Billeder/unnamed (1).webp">
+        </div>
+
+        <div class="video-info">
+            <p class="video-title">
+    Talking Tech and AI with Google CEO Sundar Pichai!
+</p>
+<p class="video-author">
+    Marques Brownlee
+</p>   
+
+<p class="stats">
+    3.4M views &#183 6 months ago
+</p>
+
+<p class="linje">
+    </p>
+        </div> 
+       
+        
+    </div>
+
+    </div>
+
+
+<div class="video-preview">
+    <div class="thumbnail-row"> 
+ <a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_blank">
+  <img class="thumbnail1" src="Billeder/thumbnail-4.webp">
+</a>
+<div class="video-time">19:12</div>
+    </div>
+
+    <div class="video-info-grid"> 
+        <div class="channel-picture">
+            <img class="profile-picture" src="Billeder/11.jpg">
+        </div>
+
+        <div class="video-info">
+            <p class="video-title">
+    Try the hardest math challenge #9
+</p>
+<p class="video-author">
+    Guxi
+</p>   
+
+<p class="stats">
+    1.4M views &#183 1 years ago
+</p>
+        </div> 
+       
+        
+    </div>
+
+    </div>
+
+    <div class="video-preview">
+    <div class="thumbnail-row"> 
+<a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_blank">
+  <img class="thumbnail1" src="Billeder/2.avif">
+</a>
+<div class="video-time">34:22</div>
+    </div>
+
+    <div class="video-info-grid"> 
+        <div class="channel-picture">
+            <img class="profile-picture" src="Billeder/22.jpg">
+        </div>
+
+        <div class="video-info">
+            <p class="video-title">
+    Fremtiden ser lys ud med AI teknologi!
+</p>
+<p class="video-author">
+    Brughj
+</p>   
+
+<p class="stats">
+    15K views &#183 2 days ago
+</p>
+        </div> 
+       
+        
+    </div>
+
+    </div>
+
+
+<div class="video-preview">
+    <div class="thumbnail-row"> 
+<a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_blank">
+  <img style="margin-top: -32px;" class="thumbnail1" src="Billeder/3.avif">
+</a>
+<div class="video-time">11:43</div>
+    </div>
+
+    <div class="video-info-grid"> 
+        <div class="channel-picture">
+            <img class="profile-picture" src="Billeder/33.jpg">
+        </div>
+
+        <div class="video-info">
+            <p class="video-title">
+    Im back with more Minecraft gameplay, in IRL
+</p>
+<p class="video-author">
+    Gameplay4xd
+</p>   
+
+<p class="stats" style="margin-bottom: 40px;">
+    233K views &#183 2 weeks ago
+</p>
+        </div> 
+       
+        
+    </div>
+
+    </div>
+</div>
+
+ </div>
+<div class="video-grid">    
+<div class="video-preview">
+    <div class="thumbnail-row"> 
+<a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_blank">
+  <img class="thumbnail1" src="Billeder/4.avif">
+</a>
+<div class="video-time">8:02</div>
+    </div>
+
+    <div class="video-info-grid"> 
+        <div class="channel-picture">
+            <img class="profile-picture" src="Billeder/44.jpg">
+        </div>
+
+        <div class="video-info">
+            <p class="video-title">
+    Learning React Course
+</p>
+<p class="video-author">
+    AICodeing
+</p>   
+
+<p class="stats">
+    4M views &#183 3 months ago
+</p>
+
+<p class="linje2">
+    </p>
+        </div> 
+       
+        
+    </div>
+
+    </div>
+
+
+<div class="video-preview">
+    <div class="thumbnail-row"> 
+<a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_blank">
+  <img class="thumbnail1" src="Billeder/5.avif">
+</a>
+<div class="video-time">52:12</div>
+    </div>
+
+    <div class="video-info-grid"> 
+        <div class="channel-picture">
+            <img class="profile-picture" src="Billeder/55.jpg">
+        </div>
+
+        <div class="video-info">
+            <p class="video-title">
+    Best SOLO run #4
+</p>
+<p class="video-author">
+    MiniGamer
+</p>   
+
+<p class="stats">
+    232K views &#183 2 weeks ago
+</p>
+        </div> 
+       
+        
+    </div>
+
+    </div>
+
+<div class="video-preview">
+    <div class="thumbnail-row"> 
+<a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_blank">
+  <img class="thumbnail1" src="Billeder/6.avif">
+</a>
+<div class="video-time">9:32</div>
+    </div>
+
+    <div class="video-info-grid"> 
+        <div class="channel-picture">
+            <img class="profile-picture" src="Billeder/77.jpg">
+        </div>
+
+        <div class="video-info">
+            <p class="video-title">
+    Rejser alene til Thailand!
+</p>
+<p class="video-author">
+    RunYoutube
+</p>   
+
+<p class="stats">
+    432K views &#183 1 months ago
+</p>
+        </div> 
+       
+        
+    </div>
+
+    </div>
+
+
+<div class="video-preview">
+    <div class="thumbnail-row"> 
+<a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_blank">
+  <img class="thumbnail1" src="Billeder/7.avif">
+</a>
+<div class="video-time">19:12</div>
+    </div>
+
+    <div class="video-info-grid"> 
+        <div class="channel-picture">
+            <img class="profile-picture" src="Billeder/66.jpg">
+        </div>
+
+        <div class="video-info">
+            <p class="video-title">
+    Rust controlling server
+</p>
+<p class="video-author">
+    Posty
+</p>   
+
+<p class="stats">
+    1.4M views &#183 1 years ago
+</p>
+        </div> 
+       
+        
+    </div>
+
+    </div>
+
+    <div class="video-preview">
+    <div class="thumbnail-row"> 
+<a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_blank">
+  <img class="thumbnail1" src="Billeder/8.avif">
+</a>
+<div class="video-time">34:22</div>
+    </div>
+
+    <div class="video-info-grid"> 
+        <div class="channel-picture">
+            <img class="profile-picture" src="Billeder/88.jpg">
+        </div>
+
+        <div class="video-info">
+            <p class="video-title">
+    Talking Tech and AI with Google CEO Sundar Pichai!
+</p>
+<p class="video-author">
+    Brownlee
+</p>   
+
+<p class="stats">
+    3.4M views &#183 6 months ago
+</p>
+        </div> 
+       
+        
+    </div>
+
+    </div>
+
+
+<div class="video-preview">
+    <div class="thumbnail-row"> 
+<a href="https://www.youtube.com/watch?v=n2RNcPRtAiY" target="_blank">
+  <img class="thumbnail1" src="Billeder/9.avif" style="margin-top: -0px;">
+</a>
+<div class="video-time">11:43</div>
+    </div>
+
+    <div class="video-info-grid"> 
+        <div class="channel-picture">
+            <img class="profile-picture" src="Billeder/99.jpg">
+        </div>
+
+        <div class="video-info">
+            <p class="video-title">
+    Try Not To Laugh Challenge #2
+</p>
+<p class="video-author">
+    Markiplier
+</p>   
+
+<p class="stats">
+    31.4M views &#183 4 years ago
+</p>
+        </div> 
+       
+        
+    </div>
+
+    </div>
+
+<!-- 6 ekstra videoer -->
+        <div class="video-preview">
+            <div class="thumbnail-row"> 
+        <img class="thumbnail1" src="Billeder/thumbnail-5.webp">
+        <div class="video-time">12:34</div>
+            </div>
+            <div class="video-info-grid"> 
+                <div class="channel-picture">
+                    <img class="profile-picture" src="Billeder/55.jpg">
+                </div>
+                <div class="video-info">
+                    <p class="video-title">React Crash Course</p>
+                    <p class="video-author">CodeAcademy</p>
+                    <p class="stats">1.2M views &#183 1 year ago</p>
+                </div>
+            </div>
+        </div>
+        <div class="video-preview">
+            <div class="thumbnail-row"> 
+        <img class="thumbnail1" src="Billeder/thumbnail-6.webp">
+        <div class="video-time">16:45</div>
+            </div>
+            <div class="video-info-grid"> 
+                <div class="channel-picture">
+                    <img class="profile-picture" src="Billeder/66.jpg">
+                </div>
+                <div class="video-info">
+                    <p class="video-title">How to Start Investing</p>
+                    <p class="video-author">Nordnet</p>
+                    <p class="stats">800K views &#183 3 months ago</p>
+                </div>
+            </div>
+        </div>
+        <div class="video-preview">
+            <div class="thumbnail-row"> 
+        <img class="thumbnail1" src="Billeder/thumbnail-7.webp">
+        <div class="video-time">7:21</div>
+            </div>
+            <div class="video-info-grid"> 
+                <div class="channel-picture">
+                    <img class="profile-picture" src="Billeder/77.jpg">
+                </div>
+                <div class="video-info">
+                    <p class="video-title">Solo Travel in Asia</p>
+                    <p class="video-author">TravelWithMe</p>
+                    <p class="stats">2.1M views &#183 2 weeks ago</p>
+                </div>
+            </div>
+        </div>
+        <div class="video-preview">
+            <div class="thumbnail-row"> 
+        <img class="thumbnail1" src="Billeder/thumbnail-8.webp">
+        <div class="video-time">10:10</div>
+            </div>
+            <div class="video-info-grid"> 
+                <div class="channel-picture">
+                    <img class="profile-picture" src="Billeder/88.jpg">
+                </div>
+                <div class="video-info">
+                    <p class="video-title">AI Explained Simply</p>
+                    <p class="video-author">AI4All</p>
+                    <p class="stats">3.8M views &#183 5 months ago</p>
+                </div>
+            </div>
+        </div>
+        <div class="video-preview">
+            <div class="thumbnail-row"> 
+        <img class="thumbnail1" src="Billeder/thumbnail-9.webp">
+        <div class="video-time">18:00</div>
+            </div>
+            <div class="video-info-grid"> 
+                <div class="channel-picture">
+                    <img class="profile-picture" src="Billeder/99.jpg">
+                </div>
+                <div class="video-info">
+                    <p class="video-title">Ultimate Gaming Setup</p>
+                    <p class="video-author">GamerZone</p>
+                    <p class="stats">4.5M views &#183 2 years ago</p>
+                </div>
+            </div>
+        </div>
+        <div class="video-preview">
+            <div class="thumbnail-row"> 
+        <img style="margin-top: -32px;"class="thumbnail1" src="Billeder/thumbnail-10.webp">
+        <div class="video-time">22:11</div>
+            </div>
+            <div class="video-info-grid"> 
+                <div class="channel-picture">
+                    <img class="profile-picture" src="Billeder/11.jpg">
+                </div>
+                <div class="video-info">
+                    <p class="video-title">Math Tricks for School</p>
+                    <p class="video-author">MathMaster</p>
+                    <p class="stats">900K views &#183 8 months ago</p>
+                </div>
+            </div>
+        </div>
+
+    
+</div>
+
+
+
+</body>
+
+
+
+
+
+</html>
