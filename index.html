@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oliver Loebel - Software Udvikler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hoved-container">
+    <div class="forside" style="margin-top:48px;">
+      <div class="forside-info">
+        <div class="forside-titel">Oliver Loebel,</div>
+        <div class="forside-under">Programmer</div>
+        <div class="forside-beskrivelse">
+            Det er let at blive opslugt af kodning, men jeg elsker at gøre det brugervenligt og flot.
+			Jeg arbejder med web, design og digitale løsninger, i 
+            <span style="color:#7fd1b9">Frontend</span> og <span style="color:#7fd1b9">Backend</span>.</div>
+        
+        
+        <div class="forside-links">
+          <a href="https://www.linkedin.com/in/oliver-l%C3%B8bel-6a7435369/" target="_blank">Blog</a>
+          <a onclick="window.location.href='Portfolio.html'" style="cursor:pointer;">Portfolio</a>
+            <a href="mailto:oliver.lobel@yahoo.dk" class="forside-links">Kontakt</a>
+        </div>
+      </div>
+      
+      <div class="avatar">OL</div>
+  
+    </div>
+
+
+    <div class="sektioner">
+      <div class="sektion" id="blog">
+        <div class="sektion-titel">Blog</div>
+        <div>Læs hvad jeg deler med verden.</div>
+      </div>
+
+      <div class="sektion" id="portfolio">
+        <div class="sektion-titel">Portfolio</div>
+        <div>Projekter, erfaringer og viden.</div>
+      </div>
+
+      <div class="sektion">
+        <div class="sektion-titel">Under Uddannelse</div>
+        <div>Software Civilingeniør</div>
+      </div>
+
+      <div class="sektion" id="kontakt">
+        <div class="sektion-titel">Kontakt</div>
+        <div>Åben for udfordringer!</div>
+      </div>
+    </div>
+
+
+    <div class="teknologi-sektioner">
+      <div class="teknologi-sektioner-overskrift">TEKNOLOGIER</div>
+      <div class="teknologi-sektioner-linje"></div>
+      <div class="teknologi-boks-container teknologi-boks-backend">
+        <div class="teknologi-gruppe">
+          <div class="teknologi-gruppe-titel">Backend</div>
+          <div class="teknologi-grid">
+            <div class="teknologi-boks"><div class="teknologi-navn">Typescript</div><div class="teknologi-beskrivelse">Typed JavaScript</div></div>
+            <div class="teknologi-boks"><div class="teknologi-navn">NextJS</div><div class="teknologi-beskrivelse">React framework</div></div>
+            <div class="teknologi-boks"><div class="teknologi-navn">Python</div><div class="teknologi-beskrivelse">Backend</div></div>
+            <div class="teknologi-boks"><div class="teknologi-navn">API</div><div class="teknologi-beskrivelse">API Call</div></div>
+            <div class="teknologi-boks"><div class="teknologi-navn">C#</div><div class="teknologi-beskrivelse">Build tool</div></div>
+            <div class="teknologi-boks"><div class="teknologi-navn">C++</div><div class="teknologi-beskrivelse">Build tool</div></div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="teknologi-boks-container teknologi-boks-frontend">
+        <div class="teknologi-gruppe">
+          <div class="teknologi-gruppe-titel">Frontend</div>
+          <div class="teknologi-grid">
+            <div class="teknologi-boks"><div class="teknologi-navn">Typescript</div><div class="teknologi-beskrivelse">Typed JavaScript</div></div>
+            <div class="teknologi-boks"><div class="teknologi-navn">React</div><div class="teknologi-beskrivelse">UI library</div></div>
+            <div class="teknologi-boks"><div class="teknologi-navn">Javascript</div><div class="teknologi-beskrivelse">Scripting</div></div>
+            <div class="teknologi-boks"><div class="teknologi-navn">HTML</div><div class="teknologi-beskrivelse">Markup</div></div>
+            <div class="teknologi-boks"><div class="teknologi-navn">CSS</div><div class="teknologi-beskrivelse">Styling</div></div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="teknologi-boks-container teknologi-boks-tools">
+        <div class="teknologi-gruppe">
+          <div class="teknologi-gruppe-titel">Tools</div>
+          <div class="teknologi-grid">
+            <div class="teknologi-boks"><div class="teknologi-navn">VS Code</div><div class="teknologi-beskrivelse">Editor</div></div>
+            <div class="teknologi-boks"><div class="teknologi-navn">Github</div><div class="teknologi-beskrivelse">Code hosting</div></div>
+            <div class="teknologi-boks"><div class="teknologi-navn">Wordpress</div><div class="teknologi-beskrivelse">CMS</div></div>
+            <div class="teknologi-boks"><div class="teknologi-navn">Photoshop</div><div class="teknologi-beskrivelse">Thumbnail </div></div>
+            <div class="teknologi-boks"><div class="teknologi-navn">Premiere Pro</div><div class="teknologi-beskrivelse">Videos</div></div>
+            <div class="teknologi-boks"><div class="teknologi-navn">Banding</div><div class="teknologi-beskrivelse"></div>Visuel</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bund-footer">
+  <div class="footer-linje"></div>
+  <div class="footer-indhold">
+    <span>2025 - Alle rettigheder forbeholdes</span>
+    <span style="float:right;">Bygget med <span style="color:#6fa3ff;">HTML, CSS</span> &amp; <span style="color:#6fa3ff;">JavaScript</span></span>
+  </div>
+</footer>
+</body>
+
+
+<script>
+    const text1 = "Oliver Loebel";
+const el1 = document.querySelector('.forside-titel');
+if(el1) {
+    el1.textContent = "";
+    let i = 0;
+    function typeWriter1() {
+        if (i < text1.length) {
+            el1.textContent += text1.charAt(i);
+            i++;
+            setTimeout(typeWriter1, 120);
+        }
+    }
+    typeWriter1();
+}
+
+const text2 = "PROGRAMMER";
+const el2 = document.querySelector('.forside-under');
+if(el2) {
+    el2.textContent = "";
+    let j = 0;
+    function typeWriter2() {
+        if (j < text2.length) {
+            el2.textContent += text2.charAt(j);
+            j++;
+            setTimeout(typeWriter2, 120);
+        }
+    }
+    typeWriter2();
+}
+
+
+
+</script>
+
+</html>

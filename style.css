@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body {
+  background: #10182b;
+  color: #eaf0fa;
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background-image:
+    linear-gradient(0deg, rgba(60,100,180,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(60,100,180,0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  font-size: 15px;
+}
+.forside {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 4vw 18px 4vw;
+}
+.forside-info {
+  max-width: 600px;
+}
+.forside-titel {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #6fa3ff;
+}
+.forside-under {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+.forside-beskrivelse {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #b3c2d6;
+}
+.forside-links a {
+  color: #6fa3ff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 18px;
+  font-size: 18px;
+}
+.forside-links a:hover {
+  text-decoration: underline;
+}
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #16213a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  color: #6fa3ff;
+}
+.sektioner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 36px;
+  padding: 18px 0;
+}
+
+.sektion:hover{
+    background-color: #172139;
+    cursor: pointer;
+}
+
+.sektion {
+  background: rgba(26,34,51,0.7);
+  border-radius: 14px;
+  padding: 18px 14px;
+  color: #eaf0fa;
+  font-size: 20px;
+  box-shadow: 0 2px 18px #0002;
+  min-height: 44px;
+}
+.sektion-titel {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #6fa3ff;
+}
+.teknologi-sektioner {
+  margin-top: 48px;
+}
+.teknologi-sektioner-overskrift {
+  font-size: 18px;
+  color: #b3c2d6;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.teknologi-sektioner-linje {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(100,180,255,0.12) 0%, rgba(100,180,255,0.04) 100%);
+  margin-bottom: 24px;
+  border-radius: 2px;
+}
+.teknologi-boks-container {
+  background: rgba(26,34,51,0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 32px #0003;
+  padding: 8px 16px;
+  margin: 32px auto 0 auto;
+  max-width: 1400px;
+  animation: hop-frem 0.7s cubic-bezier(.7,-0.5,.3,1.5) both;
+  opacity: 0;
+}
+
+.teknologi-gruppe {
+  margin-bottom: 14px;
+}
+.teknologi-gruppe-titel {
+  font-size: 17px;
+  color: #b3c2d6;
+  font-weight: 500;
+  margin-bottom: 12px;
+  margin-top: 18px;
+  letter-spacing: 1px;
+}
+.teknologi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 28px;
+  min-height: 0;
+}
+.teknologi-boks {
+  background: rgba(26,34,51,0.7);
+  border-radius: 12px;
+  padding: 12px 14px;
+  box-shadow: 0 2px 18px #0002;
+  min-height: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.teknologi-navn {
+  font-size: 16px;
+  font-weight: 600;
+  color: #eaf0fa;
+  margin-bottom: 2px;
+}
+.teknologi-beskrivelse {
+  font-size: 13px;
+  color: #b3c2d6;
+}
+.hoved-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.teknologi-boks-backend {
+  animation: hop-frem 0.7s cubic-bezier(.7,-0.5,.3,1.5) both;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+.teknologi-boks-frontend {
+  animation: hop-frem 0.7s cubic-bezier(.7,-0.5,.3,1.5) both;
+  animation-delay: 0.25s;
+  opacity: 0;
+}
+.teknologi-boks-tools {
+  animation: hop-frem 0.7s cubic-bezier(.7,-0.5,.3,1.5) both;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+.bund-footer {
+  width: 100%;
+  margin-top: 64px;
+  padding: 0 0 24px 0;
+  background: transparent;
+}
+.footer-linje {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(100,180,255,0.12) 0%, rgba(100,180,255,0.04) 100%);
+  margin-bottom: 18px;
+  border-radius: 2px;
+}
+.footer-indhold {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #b3c2d6;
+  font-size: 16px;
+  padding: 0 8vw;
+}
+@media (max-width: 800px) {
+  .footer-indhold {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    padding: 0 2vw;
+  }
+}
+@media (max-width: 1500px) {
+  .hoved-container, .teknologi-boks-container {
+    max-width: 98vw;
+    padding: 0 2vw;
+  }
+}
+@media (max-width: 1200px) {
+  .teknologi-boks-container {
+    max-width: 98vw;
+  }
+}
+@media (max-width: 1000px) {
+  .hoved-container, .teknologi-boks-container {
+    max-width: 98vw;
+    padding: 0 2vw;
+  }
+}
+@media (max-width: 800px) {
+  .hoved-container, .teknologi-boks-container {
+    max-width: 100vw;
+    padding: 0 1vw;
+  }
+  .forside {
+    padding: 18px 2vw 8px 2vw;
+  }
+  .sektioner, .teknologi-sektioner {
+    padding: 8px 2vw;
+  }
+  .teknologi-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .teknologi-boks {
+    padding: 10px 8px;
+    border-radius: 10px;
+  }
+  .sektion {
+    padding: 10px 8px;
+    border-radius: 10px;
+  }
+}
+@keyframes hop-frem {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.03);
+  }
+  80% {
+    transform: translateY(2px) scale(0.99);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

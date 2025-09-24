@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Kommer snart</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #10182b;
+      background-image:
+        linear-gradient(0deg, rgba(60,100,180,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(60,100,180,0.08) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .portfolio-boks {
+      background: rgba(26,34,51,0.8);
+      border-radius: 14px;
+      box-shadow: 0 4px 32px #0003;
+      padding: 38px 48px;
+      color: #eaf0fa;
+      font-size: 28px;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .tilbage-knap {
+      position: fixed;
+      top: 24px;
+      left: 24px;
+      background: #16213a;
+      color: #eaf0fa;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 22px;
+      font-size: 17px;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 2px 12px #0002;
+      z-index: 100;
+      transition: background 0.2s;
+    }
+    .tilbage-knap:hover {
+      background: #22305a;
+    }
+    @media (max-width: 600px) {
+      .portfolio-boks {
+        padding: 22px 12px;
+        font-size: 20px;
+      }
+      .tilbage-knap {
+        top: 10px;
+        left: 10px;
+        padding: 8px 14px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="tilbage-knap" onclick="window.location.href='index.html'">Tilbage</button>
+  <div class="portfolio-boks">Kommer snart</div>
+</body>
+</html>
