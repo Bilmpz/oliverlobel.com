@@ -61,7 +61,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 36px;
-  padding: 18px 0;
+  padding: 35px 0px;
 }
 
 .sektion:hover{
@@ -152,7 +152,7 @@ body {
 .hoved-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 250px;
 }
 .teknologi-boks-backend {
   animation: hop-frem 0.7s cubic-bezier(.7,-0.5,.3,1.5) both;
