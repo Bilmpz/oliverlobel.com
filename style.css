@@ -132,7 +132,7 @@ a.sektion-titel:visited {
   font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 8px;
-  margin-left: 20px;
+  margin-left: 28px;
 }
 .teknologi-sektioner-linje {
   width: 100%;
@@ -162,7 +162,7 @@ a.sektion-titel:visited {
   margin-bottom: 12px;
   margin-top: 18px;
   letter-spacing: 1px;
-  margin-left: 7px;
+  margin-left: 12px;
 }
 .teknologi-grid {
   display: grid;
