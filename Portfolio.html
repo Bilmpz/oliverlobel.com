@@ -3,33 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Kommer snart</title>
+  <title>Portfolio - Oliver Lobel</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    
-
     body {
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       background: #10182b;
       background-image:
         linear-gradient(0deg, rgba(60,100,180,0.08) 1px, transparent 1px),
         linear-gradient(90deg, rgba(60,100,180,0.08) 1px, transparent 1px);
       background-size: 32px 32px;
+      margin: 0;
+      padding: 24px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
-    .portfolio-boks {
-      background: rgba(26,34,51,0.8);
-      border-radius: 14px;
-      box-shadow: 0 4px 32px #0003;
-      padding: 38px 48px;
-      color: #eaf0fa;
-      font-size: 28px;
-      font-weight: 600;
-      text-align: center;
-      letter-spacing: 1px;
-    }
+
     .tilbage-knap {
       position: fixed;
       top: 24px;
@@ -42,29 +30,299 @@
       font-size: 17px;
       font-weight: 500;
       cursor: pointer;
-      box-shadow: 0 2px 12px #0002;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
       z-index: 100;
       transition: background 0.2s;
     }
+
     .tilbage-knap:hover {
       background: #22305a;
     }
-    @media (max-width: 600px) {
-      .portfolio-boks {
-        padding: 22px 12px;
-        font-size: 20px;
+
+    .portfolio-container {
+      max-width: 1200px;
+      margin: 80px auto 0 auto;
+      padding: 0 20px;
+    }
+
+    .portfolio-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .portfolio-title {
+      font-size: 48px;
+      font-weight: 700;
+      color: #eaf0fa;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+
+    .portfolio-subtitle {
+      font-size: 18px;
+      color: #b3c2d6;
+      margin-bottom: 40px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .project-card {
+      background: rgba(26,34,51,0.9);
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(60,100,180,0.1);
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid rgba(60,100,180,0.1);
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-placeholder {
+      font-size: 48px;
+      color: rgba(234,240,250,0.3);
+      font-weight: 300;
+    }
+
+    .project-content {
+      padding: 24px;
+    }
+
+    .project-date {
+      font-size: 12px;
+      color: #64748b;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .project-title {
+      font-size: 22px;
+      font-weight: 600;
+      color: #eaf0fa;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .project-description {
+      font-size: 14px;
+      color: #b3c2d6;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .project-technologies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .tech-tag {
+      background: rgba(60,100,180,0.2);
+      color: #7dd3fc;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid rgba(60,100,180,0.3);
+    }
+
+    .project-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .project-link {
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      border: 1px solid;
+    }
+
+    .link-primary {
+      background: #3b82f6;
+      color: white;
+      border-color: #3b82f6;
+    }
+
+    .link-primary:hover {
+      background: #2563eb;
+      border-color: #2563eb;
+    }
+
+    .link-secondary {
+      background: transparent;
+      color: #b3c2d6;
+      border-color: rgba(179,194,214,0.3);
+    }
+
+    .link-secondary:hover {
+      background: rgba(179,194,214,0.1);
+      border-color: rgba(179,194,214,0.5);
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
       }
+      
+      .portfolio-title {
+        font-size: 36px;
+      }
+      
       .tilbage-knap {
-        top: 10px;
-        left: 10px;
-        padding: 8px 14px;
+        top: 16px;
+        left: 16px;
+        padding: 8px 16px;
         font-size: 15px;
+      }
+      
+      .project-content {
+        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
   <button class="tilbage-knap" onclick="window.location.href='https://bilmpz.github.io/Official-Oliverlobel.com/'">Tilbage</button>
-  <div class="portfolio-boks">Kommer snart</div>
-</body> 
+
+  <div class="portfolio-container">
+    <div class="portfolio-header">
+      <h1 class="portfolio-title">Portfolio</h1>
+    </div>
+
+    <div class="portfolio-grid">
+  
+      <div class="project-card">
+        <div class="project-image">
+          <div class="project-placeholder" style="height: 200px; width: 600px;"><img src="sanne p.png" alt=""></div>
+        </div>
+        <div class="project-content">
+          <div class="project-date">1 Sep. 2025</div>
+          <h3 class="project-title">Web­site: Coach For Business</h3>
+          <p class="project-description">
+            Jeg har designet og udviklet en moderne, responsiv hjemmeside til Sanne Pedersen, hvor formålet er at give ledere 
+            og organisationer adgang til førsteklasses coaching og lederudvikling.
+            Hjemmesiden inkluderer:
+            <br>
+          <span>- Klar visuel kommunikation: med fokus på ro, nærvær og lederskab</span>
+          <br>
+          <span>- Fungere optimalt på både desktop og mobil.</span>
+          <br>
+          <span>- Frontend: HTML, CSS, JavaScript </span>
+          <br>
+          <span>- SEO/brugervenlighed: struktureret indhold, call-to-action og effektiv kontaktmulighed.</span>
+          <div class="project-technologies">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Wordpress</span>
+          </div>
+          <div class="project-links">
+            <a href="https://sannepedersen.dk/" class="project-link link-primary">Se projekt</a>
+            <a href="https://github.com/Bilmpz/SannePedersen" class="project-link link-secondary">Kode</a>
+          </div>
+        </div>
+      </div>
+
+  
+      <div class="project-card">
+        <div class="project-image">
+          <div class="project-placeholder">⌨️</div>
+        </div>
+        <div class="project-content">
+          <div class="project-date">01 Nov. 2025</div>
+          <h3 class="project-title">Mini-database</h3>
+          <p class="project-description">
+           Underudvikling
+          </p>
+          <div class="project-technologies">
+            <span class="tech-tag">C</span>
+            <span class="tech-tag">CSV-parser</span>
+            <span class="tech-tag">Security</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link link-primary">Se projekt</a>
+            <a href="#" class="project-link link-secondary">Kode</a>
+          </div>
+        </div>
+      </div>
+
+  
+      <div class="project-card">
+        <div class="project-image">
+          <div class="project-placeholder">🔒</div>
+        </div>
+        <div class="project-content">
+          <div class="project-date"></div>
+          <h3 class="project-title">Kontakt mig</h3>
+          <p class="project-description">
+           Lad os udvikling dit næster projekt
+          </p>
+          <div class="project-technologies">
+            <span class="tech-tag"></span>
+            <span class="tech-tag"></span>
+            <span class="tech-tag"></span>
+            <span class="tech-tag"></span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link link-primary">Se projekt</a>
+            <a href="#" class="project-link link-secondary">Kode</a>
+          </div>
+        </div>
+      </div>
+
+
+        <div class="project-card">
+        <div class="project-image">
+          <div class="project-placeholder">🔒</div>
+        </div>
+        <div class="project-content">
+          <div class="project-date"></div>
+          <h3 class="project-title">Kontakt mig</h3>
+          <p class="project-description">
+           Lad os udvikling dit næster projekt
+          </p>
+          <div class="project-technologies">
+            <span class="tech-tag"></span>
+            <span class="tech-tag"></span>
+            <span class="tech-tag"></span>
+            <span class="tech-tag"></span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link link-primary">Se projekt</a>
+            <a href="#" class="project-link link-secondary">Kode</a>
+          </div>
+        </div>
+      </div>
+</body>
 </html>
