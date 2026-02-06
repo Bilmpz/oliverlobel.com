@@ -158,37 +158,56 @@
     </div>
   </footer>
 
-  <script>
-    const text1 = "Oliver Løbel";
-    const el1 = document.querySelector('.forside-titel');
-    if(el1) {
-      el1.textContent = "";
-      let i = 0;
-      function typeWriter1() {
-        if (i < text1.length) {
-          el1.textContent += text1.charAt(i);
-          i++;
-          setTimeout(typeWriter1, 120);
-        }
+ <!--Google Analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HH8Y4BW1QX"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HH8Y4BW1QX');
+</script>
+
+
+<!--JavaScript (typewriter osv)-->
+<script>
+  const text1 = "Oliver Løbel";
+  const el1 = document.querySelector('.forside-titel');
+
+  if (el1) {
+    el1.textContent = "";
+    let i = 0;
+
+    function typeWriter1() {
+      if (i < text1.length) {
+        el1.textContent += text1.charAt(i);
+        i++;
+        setTimeout(typeWriter1, 120);
       }
-      typeWriter1();
     }
 
-    const text2 = "DEVELOPER";
-    const el2 = document.querySelector('.forside-under');
-    if(el2) {
-      el2.textContent = "";
-      let j = 0;
-      function typeWriter2() {
-        if (j < text2.length) {
-          el2.textContent += text2.charAt(j);
-          j++;
-          setTimeout(typeWriter2, 120);
-        }
+    typeWriter1();
+  }
+
+  const text2 = "DEVELOPER";
+  const el2 = document.querySelector('.forside-under');
+
+  if (el2) {
+    el2.textContent = "";
+    let j = 0;
+
+    function typeWriter2() {
+      if (j < text2.length) {
+        el2.textContent += text2.charAt(j);
+        j++;
+        setTimeout(typeWriter2, 120);
       }
-      typeWriter2();
     }
-  </script>
+
+    typeWriter2();
+  }
+</script>
 
 </body>
 </html>
