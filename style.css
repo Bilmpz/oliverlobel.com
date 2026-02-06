@@ -280,6 +280,7 @@ a.sektion-titel:visited {
     padding: 10px 8px;
     border-radius: 10px;
   }
+  
 }
 @keyframes hop-frem {
   0% {
@@ -297,4 +298,5 @@ a.sektion-titel:visited {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
+  
 }

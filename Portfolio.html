@@ -58,12 +58,6 @@
       letter-spacing: 2px;
     }
 
-    .portfolio-subtitle {
-      font-size: 18px;
-      color: #b3c2d6;
-      margin-bottom: 40px;
-    }
-
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
@@ -88,27 +82,26 @@
     .project-image {
       width: 100%;
       height: 200px;
-      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
       position: relative;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
       border-bottom: 1px solid rgba(60,100,180,0.1);
-      margin-bottom: 20px;
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
     }
 
     .project-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-
-
+      display: block;
     }
 
-    .project-placeholder {
-      font-size: 48px;
-      color: rgba(234,240,250,0.3);
-      font-weight: 300;
+    .project-image img.contain {
+      object-fit: contain;
+      padding: 14px;
+      background: rgba(26,34,51,0.9);
     }
 
     .project-content {
@@ -158,6 +151,7 @@
     .project-links {
       display: flex;
       gap: 12px;
+      flex-wrap: wrap;
     }
 
     .project-link {
@@ -168,6 +162,7 @@
       font-weight: 500;
       transition: all 0.2s ease;
       border: 1px solid;
+      display: inline-block;
     }
 
     .link-primary {
@@ -197,18 +192,18 @@
         grid-template-columns: 1fr;
         gap: 24px;
       }
-      
+
       .portfolio-title {
         font-size: 36px;
       }
-      
+
       .tilbage-knap {
         top: 16px;
         left: 16px;
         padding: 8px 16px;
         font-size: 15px;
       }
-      
+
       .project-content {
         padding: 20px;
       }
@@ -216,6 +211,7 @@
   </style>
 </head>
 <body>
+
   <button class="tilbage-knap" onclick="window.location.href='https://bilmpz.github.io/oliverlobel.com/'">Tilbage</button>
 
   <div class="portfolio-container">
@@ -224,26 +220,22 @@
     </div>
 
     <div class="portfolio-grid">
-  
+
       <div class="project-card">
         <div class="project-image">
-          <div class="project-placeholder" style="height: 200px; width: 600px;"><img src="sanne p.png" alt=""></div>
+          <img src="Pic/sanne p.png" alt="Website til Coach For Business" loading="lazy">
         </div>
         <div class="project-content">
           <div class="project-date">1 Sep. 2025</div>
-          <h3 class="project-title">Web­site: Coach For Business</h3>
+          <h3 class="project-title">Website: Coach For Business</h3>
           <p class="project-description">
-            Jeg har designet og udviklet en moderne, responsiv hjemmeside til Sanne Pedersen, hvor formålet er at give ledere 
-            og organisationer adgang til førsteklasses coaching og lederudvikling.
-            Hjemmesiden inkluderer:
-            <br>
-          <span>- Klar visuel kommunikation: med fokus på ro, nærvær og lederskab</span>
-          <br>
-          <span>- Fungere optimalt på både desktop og mobil.</span>
-          <br>
-          <span>- Frontend: HTML, CSS, JavaScript </span>
-          <br>
-          <span>- SEO/brugervenlighed: struktureret indhold, call-to-action og effektiv kontaktmulighed.</span>
+            Jeg har designet og udviklet en moderne, responsiv hjemmeside til Sanne Pedersen, hvor formålet er at give ledere
+            og organisationer adgang til førsteklasses coaching og lederudvikling.<br><br>
+            - Klar visuel kommunikation: fokus på ro, nærvær og lederskab<br>
+            - Fungerer optimalt på både desktop og mobil<br>
+            - Frontend: HTML, CSS, JavaScript<br>
+            - SEO/brugervenlighed: struktureret indhold, call-to-action og effektiv kontaktmulighed
+          </p>
           <div class="project-technologies">
             <span class="tech-tag">HTML</span>
             <span class="tech-tag">CSS</span>
@@ -251,50 +243,28 @@
             <span class="tech-tag">Wordpress</span>
           </div>
           <div class="project-links">
-            <a href="https://sannepedersen.dk/" class="project-link link-primary">Se projekt</a>
-            <a href="https://github.com/Bilmpz/SannePedersen" class="project-link link-secondary">Kode</a>
+            <a href="https://sannepedersen.dk/" class="project-link link-primary" target="_blank" rel="noopener noreferrer">Se projekt</a>
+            <a href="https://github.com/Bilmpz/SannePedersen" class="project-link link-secondary" target="_blank" rel="noopener noreferrer">Kode</a>
           </div>
         </div>
       </div>
 
-  
       <div class="project-card">
         <div class="project-image">
-          <div class="project-placeholder"><img src="data.png" alt=""></div>
-        </div>
-        <div class="project-content">
-          <div class="project-date">03 Nov. 2025</div>
-          <h3 class="project-title">Mini-database </h3>
-          <p class="project-description">
-           Underudvikling(Forsøg på universitet) - Dette program er et simpelt CSV-læseværktøj skrevet i C. 
-           Programmet loader en csv file, som indeholder data i tabelform,(CSV-format). 
-           <br>
-           <br>
-           <span>Målet er at arbejde imod et automatisk database, som behandler den data der bliver uploadet til den</span>
-          
-          </p>
-          <div class="project-technologies">
-            <span class="tech-tag">C</span>
-            <span class="tech-tag">CSV-parser</span>
-            <span class="tech-tag">Security</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Bilmpz/Mini-Database" class="project-link link-primary">Se projekt</a>
-            <a href="https://github.com/Bilmpz/Mini-Database" class="project-link link-secondary">Kode</a>
-          </div>
-        </div>
-      </div>
-
-  
-      <div class="project-card">
-        <div class="project-image">
-          <div class="project-placeholder"><img src="aqualink.png" alt=""></div>
+          <img src="Pic/aqualink.png" alt="Forbrugerportal med SQL login" loading="lazy">
         </div>
         <div class="project-content">
           <div class="project-date">12 Dec. 2025</div>
           <h3 class="project-title">Forbrugerportal m. SQL</h3>
           <p class="project-description">
-           En website kodet i HTML, CSS og JavaScript som bruger en SQL styrtet database til login. Se koden og test starten ud, ved at klikke på knappen nedenfor, min SQL ligger i kode og den kan derfor køres direkte igennem en terminal. 
+            Jeg har udviklet en webapp i HTML, CSS og JavaScript, hvor brugere kan oprette sig og logge 
+            ind via en SQL-styret database. Projektet viser en simpel, men realistisk login-flow med fokus på struktur, 
+            sikkerhed og en god brugeroplevelse<br><br>
+
+          - Login-system med SQL-database (brugerdata gemmes og valideres)<br>
+          - Simpelt UI: tydelig form, fejlbeskeder og feedback til brugeren<br><br><br><br>
+
+            
           </p>
           <div class="project-technologies">
             <span class="tech-tag">HTML</span>
@@ -303,22 +273,22 @@
             <span class="tech-tag">SQL</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/Bilmpz/Aqualog-Website" class="project-link link-primary">Se projekt</a>
-            <a href="https://github.com/Bilmpz/Aqualog-Website" class="project-link link-secondary">Kode</a>
+            <a href="https://github.com/Bilmpz/Aqualog-Website" class="project-link link-primary" target="_blank" rel="noopener noreferrer">Se projekt</a>
+            <a href="https://github.com/Bilmpz/Aqualog-Website" class="project-link link-secondary" target="_blank" rel="noopener noreferrer">Kode</a>
           </div>
         </div>
       </div>
 
-
-        <div class="project-card">
+      <div class="project-card">
         <div class="project-image">
-          <div class="project-placeholder"><img src="BPtech.png" alt=""></div>
+          <img src="Pic/BPtech.png" alt="Kundeplatform for BA Technologies" loading="lazy">
         </div>
         <div class="project-content">
           <div class="project-date">17 Jan. 2026</div>
-          <h3 class="project-title">Kundeplatform for BA Technologies </h3>
+          <h3 class="project-title">Kundeplatform for BA Technologies</h3>
           <p class="project-description">
-           Udkast til kundeplatform - En kundeplatform som skal med API kald vise vores data indsamling fra vores måler. Bygget igennem JavaScript og Typescript, og sat op på Supabase. Dog stadig underudvikling 
+            Udkast til kundeplatform – en platform som via API-kald viser data fra målere.
+            Bygget med JavaScript/TypeScript og sat op med Supabase. Stadig under udvikling.<br><br><br>
           </p>
           <div class="project-technologies">
             <span class="tech-tag">JavaScript</span>
@@ -326,34 +296,58 @@
             <span class="tech-tag">Supabase</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/Bilmpz/customer-dashboard" class="project-link link-primary">Se projekt</a>
-            <a href="https://github.com/Bilmpz/customer-dashboard" class="project-link link-secondary">Kode</a>
+            <a href="https://github.com/Bilmpz/customer-dashboard" class="project-link link-primary" target="_blank" rel="noopener noreferrer">Se projekt</a>
+            <a href="https://github.com/Bilmpz/customer-dashboard" class="project-link link-secondary" target="_blank" rel="noopener noreferrer">Kode</a>
           </div>
         </div>
       </div>
-       <div class="project-card">
-        <div class="project-image">
-          <div class="project-placeholder">
-  <img src="pngegg.png" alt="" style="max-width: 200px; width: auto; height: auto;">
-</div>
 
+      <div class="project-card">
+        <div class="project-image">
+          <img class="contain" src="Pic/pngegg.png" alt="1. Semester projekt" loading="lazy">
         </div>
         <div class="project-content">
           <div class="project-date">22 Dec. 2025</div>
           <h3 class="project-title">1. Semester projekt</h3>
           <p class="project-description">
-           Vores første semesterprojekt handler om at optimere boardingprocessen i fly.
-          Vi undersøger, hvordan forskellige boardingstrategier påvirker tiden og effektiviteten ved ombordstigning.
-          Projektet bygger på simulationer og modeller, hvor vi sammenligner metoder som random, back-to-front og WilMA. 
+            Vores første semesterprojekt handler om at optimere boardingprocessen i fly.
+            Vi undersøger, hvordan forskellige boardingstrategier påvirker tiden og effektiviteten ved ombordstigning.
+            Projektet bygger på simulationer og modeller, hvor vi sammenligner metoder som random, back-to-front og WilMA.
+          </p>
           <div class="project-technologies">
             <span class="tech-tag">C</span>
-
           </div>
           <div class="project-links">
-            <a href="https://github.com/Bilmpz/1.-Semester-projekt---AAU-CPH" class="project-link link-primary">Se projekt</a>
-            <a href="https://github.com/Bilmpz/1.-Semester-projekt---AAU-CPH" class="project-link link-secondary">Kode</a>
+            <a href="https://github.com/Bilmpz/1.-Semester-projekt---AAU-CPH" class="project-link link-primary" target="_blank" rel="noopener noreferrer">Se projekt</a>
+            <a href="https://github.com/Bilmpz/1.-Semester-projekt---AAU-CPH" class="project-link link-secondary" target="_blank" rel="noopener noreferrer">Kode</a>
           </div>
         </div>
       </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="Pic/Stroemlybillede.png" alt="Onepage for strømly.dk" loading="lazy">
+        </div>
+        <div class="project-content">
+          <div class="project-date">02 Feb. 2026</div>
+          <h3 class="project-title">Onepage for strømly.dk</h3>
+          <p class="project-description">
+            Onepage-website lavet som et hurtigt og enkelt landingpage-udkast for strømly.dk.
+            Fokus på rent design, klar kommunikation og hurtig loading.
+          </p>
+          <div class="project-technologies">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">React</span>
+          </div>
+          <div class="project-links">
+            <a href="https://stroemly.dk/" class="project-link link-primary" target="_blank" rel="noopener noreferrer">Se projekt</a>
+            <a href="https://github.com/Bilmpz/Stroemly" class="project-link link-secondary" target="_blank" rel="noopener noreferrer">Kode</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </body>
 </html>
