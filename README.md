@@ -7,14 +7,14 @@ Siden er bygget som en moderne, responsiv præsentation af mig som software deve
 
 ---
 
-## 🌐 Live Website
+##  Live Website
 
 🔗 Besøg siden her:  
 https://oliverlobel.com/
 
 ---
 
-## 📌 Formål
+##  Formål
 
 Formålet med hjemmesiden er at skabe en professionel online tilstedeværelse, hvor besøgende hurtigt kan:
 
@@ -25,7 +25,7 @@ Formålet med hjemmesiden er at skabe en professionel online tilstedeværelse, h
 
 ---
 
-## 🛠️ Teknologier
+##  Teknologier
 
 Projektet er udviklet med:
 
@@ -36,7 +36,7 @@ Projektet er udviklet med:
 
 ---
 
-## ✨ Features
+##  Features
 
 - Moderne og minimalistisk design  
 - Mobilvenlig og responsiv opbygning  
@@ -47,7 +47,7 @@ Projektet er udviklet med:
 
 ---
 
-## 📂 Projektstruktur
+##  Projektstruktur
 
 ```bash
 /
