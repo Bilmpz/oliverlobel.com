@@ -9,7 +9,7 @@ Siden er bygget som en moderne, responsiv præsentation af mig som software deve
 
 ##  Live Website
 
-🔗 Besøg siden her:  
+Besøg siden her:  
 https://oliverlobel.com/
 
 ---
