@@ -66,6 +66,7 @@
       grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
       gap: 40px;
       margin-bottom: 60px;
+      align-items: stretch;
     }
 
     .project-card {
@@ -75,6 +76,9 @@
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       border: 1px solid rgba(60,100,180,0.1);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .project-card:hover {
@@ -92,6 +96,7 @@
       justify-content: center;
       border-bottom: 1px solid rgba(60,100,180,0.1);
       background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      flex-shrink: 0;
     }
 
     .project-image img {
@@ -109,6 +114,9 @@
 
     .project-content {
       padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
 
     .project-date {
@@ -139,6 +147,7 @@
       flex-wrap: wrap;
       gap: 8px;
       margin-bottom: 20px;
+      margin-top: auto;
     }
 
     .tech-tag {
@@ -217,90 +226,79 @@
 
   <button class="tilbage-knap" onclick="window.location.href='https://bilmpz.github.io/oliverlobel.com/'">Tilbage</button>
 
-  <div class="portfolio-container">
-    <div class="portfolio-header">
-      <h1 class="portfolio-title">Portfolio</h1>
+<div class="portfolio-container">
+  <div class="portfolio-header">
+    <h1 class="portfolio-title">Portfolio</h1>
+    <p style="font-size: 17px; font-weight: 500; color: #94a3b8; text-align: center; line-height: 1.6; letter-spacing: 0.2px; margin: 12px 0 0 0;">
+      Tag et kig på min GitHub for et bedre indblik – her ser du kun udvalgte demoer
+    </p>
+  </div>
+
+  <div class="portfolio-grid">
+    <div class="project-card">
+      <div class="project-image">
+        <img src="Pic/smile.png" alt="Onepage for smilebrandingstudio.dk" loading="lazy">
+      </div>
+      <div class="project-content">
+        <div class="project-date">10 Marts. 2026</div>
+        <h3 class="project-title">Onepage for smilebrandingstudio.dk</h3>
+        <p class="project-description">
+          Webside udviklet til Smile Branding Studio som en del af deres rebranding til Formatet ApS.
+          Siden fungerer som en klar og brugervenlig overgang mellem det gamle og nye brand med fokus på enkel kommunikation og et roligt visuelt udtryk.
+        </p>
+        <div class="project-technologies">
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">CSS</span>
+        </div>
+        <div class="project-links">
+          <a href="https://smilebrandingstudio.dk/" class="project-link link-primary" target="_blank" rel="noopener noreferrer">Se projekt</a>
+          <a href="https://github.com/Bilmpz/smilestudio" class="project-link link-secondary" target="_blank" rel="noopener noreferrer">Kode</a>
+        </div>
+      </div>
     </div>
 
-    <div class="portfolio-grid">
-
-      <div class="project-card">
-        <div class="project-image">
-          <img src="Pic/sanne p.png" alt="Website til Coach For Business" loading="lazy">
+    <div class="project-card">
+      <div class="project-image">
+        <img src="Pic/lommereger.png" alt="Lommeregner på en webapplikation" loading="lazy">
+      </div>
+      <div class="project-content">
+        <div class="project-date">26 Feb. 2026</div>
+        <h3 class="project-title">Lommeregner på en webapplikation</h3>
+        <p class="project-description">
+          Webbaseret lommeregner udviklet med fokus på præcis inputhåndtering, beregningslogik og et responsivt design.
+          Projektet demonstrerer arbejde med JavaScript-funktionalitet, eventhåndtering og brugerflade.
+        </p>
+        <div class="project-technologies">
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">JavaScript</span>
         </div>
-        <div class="project-content">
-          <div class="project-date">1 Sep. 2025</div>
-          <h3 class="project-title">Website: Coach For Business</h3>
-          <p class="project-description">
-            Jeg har designet og udviklet en moderne, responsiv hjemmeside til Sanne Pedersen, hvor formålet er at give ledere
-            og organisationer adgang til førsteklasses coaching og lederudvikling.<br><br>
-            - Klar visuel kommunikation: fokus på ro, nærvær og lederskab<br>
-            - Fungerer optimalt på både desktop og mobil<br>
-            - Frontend: HTML, CSS, JavaScript<br>
-            - SEO/brugervenlighed: struktureret indhold, call-to-action og effektiv kontaktmulighed
-          </p>
-          <div class="project-technologies">
-            <span class="tech-tag">HTML</span>
-            <span class="tech-tag">CSS</span>
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">Wordpress</span>
-          </div>
-          <div class="project-links">
-            <a href="https://sannepedersen.dk/" class="project-link link-primary" target="_blank" rel="noopener noreferrer">Se projekt</a>
-            <a href="https://github.com/Bilmpz/SannePedersen" class="project-link link-secondary" target="_blank" rel="noopener noreferrer">Kode</a>
-          </div>
+        <div class="project-links">
+          <a href="https://bilmpz.github.io/Lommeregner-i-JS/" class="project-link link-primary" target="_blank" rel="noopener noreferrer">Se projekt</a>
+          <a href="https://github.com/Bilmpz/Lommeregner-i-JS" class="project-link link-secondary" target="_blank" rel="noopener noreferrer">Kode</a>
         </div>
       </div>
+    </div>
 
       <div class="project-card">
         <div class="project-image">
-          <img src="Pic/aqualink.png" alt="Forbrugerportal med SQL login" loading="lazy">
+          <img src="Pic/Stroemlybillede.png" alt="Onepage for strømly.dk" loading="lazy">
         </div>
         <div class="project-content">
-          <div class="project-date">12 Dec. 2025</div>
-          <h3 class="project-title">Forbrugerportal m. SQL</h3>
+          <div class="project-date">02 Feb. 2026</div>
+          <h3 class="project-title">Onepage for strømly.dk</h3>
           <p class="project-description">
-            Jeg har udviklet en webapp i HTML, CSS og JavaScript, hvor brugere kan oprette sig og logge 
-            ind via en SQL-styret database. Projektet viser en simpel, men realistisk login-flow med fokus på struktur, 
-            sikkerhed og en god brugeroplevelse<br><br>
-
-          - Login-system med SQL-database (brugerdata gemmes og valideres)<br>
-          - Simpelt UI: tydelig form, fejlbeskeder og feedback til brugeren<br><br><br><br>
-
-            
+            Onepage-website lavet som et hurtigt og enkelt landingpage-udkast for strømly.dk.
+            Fokus på rent design, klar kommunikation og hurtig loading.
           </p>
           <div class="project-technologies">
-            <span class="tech-tag">HTML</span>
-            <span class="tech-tag">CSS</span>
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">React</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/Bilmpz/Aqualog" class="project-link link-primary" target="_blank" rel="noopener noreferrer">Se projekt</a>
-            <a href="https://github.com/Bilmpz/Aqualog" class="project-link link-secondary" target="_blank" rel="noopener noreferrer">Kode</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-image">
-          <img src="Pic/BPtech.png" alt="Kundeplatform for BA Technologies" loading="lazy">
-        </div>
-        <div class="project-content">
-          <div class="project-date">17 Jan. 2026</div>
-          <h3 class="project-title">Kundeplatform for BA Technologies</h3>
-          <p class="project-description">
-            Udkast til kundeplatform – en platform som via API-kald viser data fra målere.
-            Bygget med JavaScript/TypeScript og sat op med Supabase. Stadig under udvikling.<br><br><br>
-          </p>
-          <div class="project-technologies">
-            <span class="tech-tag">JavaScript</span>
-            <span class="tech-tag">Typescript</span>
-            <span class="tech-tag">Supabase</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Bilmpz/customer-dashboard" class="project-link link-primary" target="_blank" rel="noopener noreferrer">Se projekt</a>
-            <a href="https://github.com/Bilmpz/customer-dashboard" class="project-link link-secondary" target="_blank" rel="noopener noreferrer">Kode</a>
+            <a href="https://stromly.dk/" class="project-link link-primary" target="_blank" rel="noopener noreferrer">Se projekt</a>
+            <a href="https://github.com/Bilmpz/Stroemly" class="project-link link-secondary" target="_blank" rel="noopener noreferrer">Kode</a>
           </div>
         </div>
       </div>
@@ -329,22 +327,78 @@
 
       <div class="project-card">
         <div class="project-image">
-          <img src="Pic/Stroemlybillede.png" alt="Onepage for strømly.dk" loading="lazy">
+          <img src="Pic/BPtech.png" alt="Kundeplatform for BA Technologies" loading="lazy">
         </div>
         <div class="project-content">
-          <div class="project-date">02 Feb. 2026</div>
-          <h3 class="project-title">Onepage for strømly.dk</h3>
+          <div class="project-date">17 Jan. 2026</div>
+          <h3 class="project-title">Kundeplatform for BA Technologies</h3>
           <p class="project-description">
-            Onepage-website lavet som et hurtigt og enkelt landingpage-udkast for strømly.dk.
-            Fokus på rent design, klar kommunikation og hurtig loading.
+            Udkast til kundeplatform – en platform som via API-kald viser data fra målere.
+            Bygget med JavaScript/TypeScript og sat op med Supabase. Stadig under udvikling.
           </p>
           <div class="project-technologies">
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">React</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Typescript</span>
+            <span class="tech-tag">Supabase</span>
           </div>
           <div class="project-links">
-            <a href="https://stromly.dk/" class="project-link link-primary" target="_blank" rel="noopener noreferrer">Se projekt</a>
-            <a href="https://github.com/Bilmpz/Stroemly" class="project-link link-secondary" target="_blank" rel="noopener noreferrer">Kode</a>
+            <a href="https://github.com/Bilmpz/customer-dashboard" class="project-link link-primary" target="_blank" rel="noopener noreferrer">Se projekt</a>
+            <a href="https://github.com/Bilmpz/customer-dashboard" class="project-link link-secondary" target="_blank" rel="noopener noreferrer">Kode</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="Pic/aqualink.png" alt="Forbrugerportal med SQL login" loading="lazy">
+        </div>
+        <div class="project-content">
+          <div class="project-date">12 Dec. 2025</div>
+          <h3 class="project-title">Forbrugerportal m. SQL</h3>
+          <p class="project-description">
+            Jeg har udviklet en webapp i HTML, CSS og JavaScript, hvor brugere kan oprette sig og logge
+            ind via en SQL-styret database. Projektet viser en simpel, men realistisk login-flow med fokus på struktur,
+            sikkerhed og en god brugeroplevelse.<br><br>
+            - Login-system med SQL-database (brugerdata gemmes og valideres)<br>
+            - Simpelt UI: tydelig form, fejlbeskeder og feedback til brugeren
+          </p>
+          <div class="project-technologies">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">SQL</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Bilmpz/Aqualog" class="project-link link-primary" target="_blank" rel="noopener noreferrer">Se projekt</a>
+            <a href="https://github.com/Bilmpz/Aqualog" class="project-link link-secondary" target="_blank" rel="noopener noreferrer">Kode</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="Pic/sanne p.png" alt="Website til Coach For Business" loading="lazy">
+        </div>
+        <div class="project-content">
+          <div class="project-date">1 Sep. 2025</div>
+          <h3 class="project-title">Website: Coach For Business</h3>
+          <p class="project-description">
+            Jeg har designet og udviklet en moderne, responsiv hjemmeside til Sanne Pedersen, hvor formålet er at give ledere
+            og organisationer adgang til førsteklasses coaching og lederudvikling.<br><br>
+            - Klar visuel kommunikation: fokus på ro, nærvær og lederskab<br>
+            - Fungerer optimalt på både desktop og mobil<br>
+            - Frontend: HTML, CSS, JavaScript<br>
+            - SEO/brugervenlighed: struktureret indhold, call-to-action og effektiv kontaktmulighed
+          </p>
+          <div class="project-technologies">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Wordpress</span>
+          </div>
+          <div class="project-links">
+            <a href="https://sannepedersen.dk/" class="project-link link-primary" target="_blank" rel="noopener noreferrer">Se projekt</a>
+            <a href="https://github.com/Bilmpz/SannePedersen" class="project-link link-secondary" target="_blank" rel="noopener noreferrer">Kode</a>
           </div>
         </div>
       </div>
