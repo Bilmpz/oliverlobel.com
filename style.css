@@ -232,6 +232,76 @@ a.sektion-titel:visited {
   font-size: 16px;
   padding: 0 8vw;
 }
+/* --- Udtalelser --- */
+.udtalelser-sektion {
+  margin-top: 48px;
+}
+
+.udtalelser-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.udtalelse-kort {
+  background: #0f1c2e;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.udtalelse-citat-mark {
+  font-size: 32px;
+  line-height: 1;
+  color: #7fd1b9;
+  font-family: Georgia, serif;
+  margin-bottom: -6px;
+}
+
+.udtalelse-tekst {
+  font-size: 0.9rem;
+  color: #b3c2d6;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.udtalelse-person {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.udtalelse-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #1e3a5f;
+  color: #7fd1b9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.udtalelse-navn {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e0eaf5;
+}
+
+.udtalelse-rolle {
+  font-size: 0.78rem;
+  color: #7a94b0;
+}
 @media (max-width: 800px) {
   .footer-indhold {
     flex-direction: column;
@@ -239,6 +309,7 @@ a.sektion-titel:visited {
     font-size: 14px;
     padding: 0 2vw;
   }
+  
 }
 @media (max-width: 1500px) {
   .hoved-container, .teknologi-boks-container {
